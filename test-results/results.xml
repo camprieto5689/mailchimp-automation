@@ -1,0 +1,10 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.485156000000018">
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-20T10:38:12.892Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.756" errors="0">
+<testcase name="Gmail login, check for Mailchimp email, and activate account" classname="tests\emailvalidation.spec.js" time="20.756">
+<system-out>
+<![CDATA[Final URL: https://us11.admin.mailchimp.com/signup/setup/
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
