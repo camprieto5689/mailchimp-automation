@@ -64,6 +64,32 @@ The issue persists across different browsers and different languages. It seems t
 
 ----------------------------------------------------------
 
+Bug Report 3: Signup Button Unresponsive in WebKit Browser using Playwright
+
+Title: Signup button unresponsive when using WebKit in Playwright
+
+Description: When attempting to automate the signup process using the WebKit browser in Playwright, the "Sign Up" button on Mailchimp's login page does not trigger any action. After clicking the button, there is no response, and the expected page transition does not occur.
+
+Steps to Reproduce:
+
+1. Use Playwright to automate a browser session with the WebKit browser.
+2. Navigate to the Mailchimp signup page: https://login.mailchimp.com/signup/?locale=en.
+3. Fill out the required fields (email, username, password).
+4. Click the "Sign Up" button.
+   
+Expected Result: The user should be redirected to the "Check your email" success page after clicking the "Sign Up" button.
+
+Actual Result: After clicking the "Sign Up" button, nothing happens, and the page remains static. No errors are logged in the console.
+
+Severity: High (This issue blocks the signup flow when using WebKit, making the test case impossible to execute for this browser.)
+
+Browser: WebKit (via Playwright)
+
+Additional Notes: The issue only occurs in WebKit; Chrome and Firefox do not exhibit this problem. It appears that the button click event is not registered or the JavaScript handling the click is not triggered in WebKit.
+
+----------------------------------------------------------
+
+
 # Mailchimp Test Automation
 
 This repository contains test automation scripts developed using Playwright to automate the sign-up process on Mailchimp. 
@@ -103,7 +129,7 @@ Running Tests
 To run the tests, use the following command:
 
 
-npx test
+npx playwright test
 
 This command will execute all tests in the repository across all configured browsers.
 
