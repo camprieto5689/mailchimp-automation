@@ -1,8 +1,32 @@
 const { test, expect } = require('@playwright/test');
+const { signupFlow } = require('./utils/signupHelper.js');
 const GmailLoginPage = require('./pages/gmailLoginPage.js');
+const SignupPage = require('./pages/signupPage.js');
+
+let signupPage; // Declare signupPage in the outer scope
+let browser; // Declare browser in the outer scope
 
 test.describe('Gmail Login and Mailchimp Account Activation Flow', () => {
+   
+  // Step 1: Run the signup flow before any tests 
+  test.beforeAll(async ({ browser: b }) => {
+    browser = b; // Assign the browser instance to the outer variable
+    signupPage = await browser.newPage(); // Assign the new page to the outer variable
+    await signupFlow(signupPage, expect); 
+  });
+  
+  // Close the page 
+  test.afterAll(async () => {
+    if (signupPage) {
+        await signupPage.close(); // Safely close the page
+    }
+    if (browser) {
+        await browser.close(); // Safely close the browser
+    }
+});
+
   test('Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account', async ({ page }) => {
+    
     const email = 'testcamila53@gmail.com'; 
     const password = 'TestPlaywrightCamila53+';
 

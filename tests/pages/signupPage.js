@@ -85,7 +85,7 @@ class SignupPage {
     // Click the "Sign Up" button
     async clickSignupButton() {
         try {
-            await this.signUpButton.click({ timeout: 10000 }); 
+            await this.signUpButton.click({ timeout: 5000 }); 
         } catch (error) {
             console.error('Clicking the "Sign Up" button failed:', error);
             throw error;

@@ -1,10 +1,428 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.485156000000018">
-<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-20T10:38:12.892Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.756" errors="0">
-<testcase name="Gmail login, check for Mailchimp email, and activate account" classname="tests\emailvalidation.spec.js" time="20.756">
+<testsuites id="" name="" tests="6" failures="6" skipped="0" errors="0" time="87.78044899999999">
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="chromium-headful" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [chromium-headful] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
 <system-out>
-<![CDATA[Final URL: https://us11.admin.mailchimp.com/signup/setup/
+<![CDATA[Starting signup process
 ]]>
 </system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823297762[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="chromium-headless" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [chromium-headless] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
+<system-out>
+<![CDATA[Starting signup process
+]]>
+</system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823300802[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="firefox-headful" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [firefox-headful] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
+<system-out>
+<![CDATA[Starting signup process
+]]>
+</system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823306611[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="firefox-headless" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [firefox-headless] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
+<system-out>
+<![CDATA[Starting signup process
+]]>
+</system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823308889[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="webkit-headful" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [webkit-headful] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
+<system-out>
+<![CDATA[Starting signup process
+]]>
+</system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823314380[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="tests\emailvalidation.spec.js" timestamp="2024-10-25T02:27:11.588Z" hostname="webkit-headless" tests="1" failures="1" skipped="0" time="0" errors="0">
+<testcase name="Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" classname="tests\emailvalidation.spec.js" time="0">
+<failure message="emailvalidation.spec.js:28:3 Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account" type="FAILURE">
+<![CDATA[  [webkit-headless] › tests\emailvalidation.spec.js:28:3 › Gmail Login and Mailchimp Account Activation Flow › Given I have a Gmail account, When I login and check for a Mailchimp email, Then I should be able to activate my account 
+
+    Error: page.goto: Target page, context or browser has been closed
+    Call log:
+      - navigating to "https://mailchimp.com/", waiting until "load"
+
+
+       at tests\pages\signupPage.js:44
+
+      42 |     async goToHomePage() {
+      43 |         try {
+    > 44 |             await this.page.goto('https://mailchimp.com/');
+         |                             ^
+      45 |             await this.page.waitForTimeout(5000); // Wait for the page to load
+      46 |         } catch (error) {
+      47 |             console.error('Navigation to the Mailchimp homepage failed:', error);
+
+        at SignupPage.goToHomePage (C:\Users\cristian\mailchimp-automation\tests\pages\signupPage.js:44:29)
+        at signupFlow (C:\Users\cristian\mailchimp-automation\tests\utils\signupHelper.js:8:20)
+        at C:\Users\cristian\mailchimp-automation\tests\emailvalidation.spec.js:15:11
+]]>
+</failure>
+<system-out>
+<![CDATA[Starting signup process
+]]>
+</system-out>
+<system-err>
+<![CDATA[Navigation to the Mailchimp homepage failed: page.goto: Target page, context or browser has been closed
+Call log:
+  [2m- navigating to "https://mailchimp.com/", waiting until "load"[22m
+
+    at SignupPage.goToHomePage [90m(C:\Users\cristian\mailchimp-automation\[39mtests\pages\signupPage.js:44:29[90m)[39m
+    at signupFlow [90m(C:\Users\cristian\mailchimp-automation\[39mtests\utils\signupHelper.js:8:20[90m)[39m
+    at [90mC:\Users\cristian\mailchimp-automation\[39mtests\emailvalidation.spec.js:15:11 {
+  [[32mSymbol(step)[39m]: {
+    stepId: [32m'pw:api@6'[39m,
+    location: {
+      file: [32m'C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js'[39m,
+      line: [33m44[39m,
+      column: [33m29[39m,
+      function: [32m'SignupPage.goToHomePage'[39m
+    },
+    category: [32m'pw:api'[39m,
+    title: [32m'page.goto(https://mailchimp.com/)'[39m,
+    apiName: [32m'page.goto'[39m,
+    params: { url: [32m'https://mailchimp.com/'[39m, waitUntil: [32m'load'[39m },
+    boxedStack: [90mundefined[39m,
+    steps: [],
+    complete: [36m[Function: complete][39m,
+    endWallTime: [33m1729823318325[39m,
+    error: {
+      message: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m,
+      stack: [32m'Error: page.goto: Target page, context or browser has been closed\n'[39m +
+        [32m'Call log:\n'[39m +
+        [32m'  \x1B[2m- navigating to "https://mailchimp.com/", waiting until "load"\x1B[22m\n'[39m +
+        [32m'\n'[39m +
+        [32m'    at SignupPage.goToHomePage (C:\\Users\\cristian\\mailchimp-automation\\tests\\pages\\signupPage.js:44:29)\n'[39m +
+        [32m'    at signupFlow (C:\\Users\\cristian\\mailchimp-automation\\tests\\utils\\signupHelper.js:8:20)\n'[39m +
+        [32m'    at C:\\Users\\cristian\\mailchimp-automation\\tests\\emailvalidation.spec.js:15:11'[39m
+    }
+  }
+}
+]]>
+</system-err>
 </testcase>
 </testsuite>
 </testsuites>

@@ -103,7 +103,7 @@ Running Tests
 To run the tests, use the following command:
 
 
-npx playwright test
+npx test
 
 This command will execute all tests in the repository across all configured browsers.
 
